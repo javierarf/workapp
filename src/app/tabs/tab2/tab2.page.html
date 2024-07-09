@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="secondary">
+  <div *ngIf="weatherData; else loading">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ weatherData.name }}</ion-card-title>
+        <ion-card-subtitle>{{ weatherData.weather[0].description | titlecase }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="weather-info">
+          <ion-icon name="thermometer-outline"></ion-icon>
+          <span>{{ weatherData.main.temp }} °C</span>
+        </div>
+        <div class="weather-info">
+          <ion-icon name="water-outline"></ion-icon>
+          <span>Humedad: {{ weatherData.main.humidity }}%</span>
+        </div>
+        <div class="weather-info">
+          <ion-icon name="speedometer-outline"></ion-icon>
+          <span>Viento: {{ weatherData.wind.speed }} m/s</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-card>
+  <ng-template #loading>
+    <ion-card-subtitle>Cargando datos del clima...</ion-card-subtitle>
+    <ion-spinner name="crescent"></ion-spinner>
+  </ng-template>
+  </ion-card>
+</ion-content>

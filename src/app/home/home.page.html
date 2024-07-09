@@ -1,0 +1,77 @@
+<ion-content [fullscreen]="true">
+  <ion-menu contentId="main-content" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="content">
+      <ion-label color="medium">Sesión activa de usuario: {{usuarioPersistente}}</ion-label>
+      <ion-label></ion-label>
+      <ion-button expand="full" color="primary" (click)="cerrar()">Cerrar sesión</ion-button>
+      <ion-button fill="clear" color="secondary" (click)="formulario()">Trabaja con nosotros</ion-button>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    
+    
+  <div class="content"@entrada>
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="dark">
+          <ion-label>Brazos</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Planchas</div>
+        <div class="ion-padding" slot="content">Lagartijas</div>
+        <div class="ion-padding" slot="content">Press de tríceps</div>
+        <div class="ion-padding" slot="content">Extención de tríceps</div>
+        <div class="ion-padding" slot="content">Pressdown de tríceps</div>
+        <div class="ion-padding" slot="content">Fondos en banco</div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="dark">
+          <ion-label>Piernas</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Sentadilla</div>
+        <div class="ion-padding" slot="content">Walking lunge</div>
+        <div class="ion-padding" slot="content">Sentadilla búlgara</div>
+        <div class="ion-padding" slot="content">Step up</div>
+        <div class="ion-padding" slot="content">Zancada alterna</div>
+        <div class="ion-padding" slot="content">Burpees con salto</div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="dark">
+          <ion-label>Abdomen</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Plancha frontal</div>
+        <div class="ion-padding" slot="content">Plancha lateral estática</div>
+        <div class="ion-padding" slot="content">Plancha lateral con elevación de cadera</div>
+        <div class="ion-padding" slot="content">Tijeras verticales</div>
+        <div class="ion-padding" slot="content">Elevación de piernas laterales</div>
+        <div class="ion-padding" slot="content">Elevación de piernas y pelvis</div>
+      </ion-accordion>
+      <ion-accordion value="fourth">
+        <ion-item slot="header" color="dark">
+          <ion-label>Cardio</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Saltar la cuerda</div>
+        <div class="ion-padding" slot="content">Saltos de tijera</div>
+        <div class="ion-padding" slot="content">Saltos con sentadilla</div>
+        <div class="ion-padding" slot="content">Pasos laterales</div>
+        <div class="ion-padding" slot="content">Escalada</div>
+        <div class="ion-padding" slot="content">Patinadores</div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+</ion-header></div>
+</ion-content>

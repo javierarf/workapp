@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input formControlName="usuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" ></ion-input>
+    </ion-item>
+
+    
+
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input formControlName="edad" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Altura</ion-label>
+      <ion-input formControlName="altura" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Peso</ion-label>
+      <ion-input formControlName="peso"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input formControlName="email" type="email" ></ion-input>
+    </ion-item>
+    
+    <ion-button type="submit" [disabled]="formulario.invalid" (click)="login()">Registrarse</ion-button>
+    <ion-toast trigger="open-toast" message="Bienvenido {{usuario}}" [duration]="4000"></ion-toast>
+  </form>
+</ion-content>

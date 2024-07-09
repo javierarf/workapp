@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card-content>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nivel de Educacion</ion-label>
+    <ion-select [(ngModel)]="selectedOption">
+      <ion-select-option value="option1">Universitario</ion-select-option>
+      <ion-select-option value="option2">Magister</ion-select-option>
+      <ion-select-option value="option3">Doctorado</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha de Nacimiento</ion-label>
+    <ion-datetime [showDefaultButtons]="true" presentation="date"></ion-datetime>
+  </ion-item>
+
+  <ion-button (click)="limpiar()">Limpiar</ion-button>
+  <ion-button (click)="mostrar()" (click)="home()">Guardar</ion-button>
+
+</ion-card-content>
